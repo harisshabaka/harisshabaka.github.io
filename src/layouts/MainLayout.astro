@@ -50,18 +50,19 @@ const { title } = Astro.props;
           <nav class="hidden md:flex gap-lg items-center">
             <a
               class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-lg text-body-lg"
-              href="#">الرئيسية</a
+              href="/">الرئيسية</a
             >
             <a
               class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg"
-              href="#">المميزات</a
+              href="#features">المميزات</a
             >
           </nav>
         </div>
         <div class="flex items-center gap-md">
-          <button
+          <a
+            href="https://github.com/user-attachments/files/28430455/haris-alshabaka-amd64-installer.zip"
             class="bg-primary text-on-primary px-lg py-xs rounded hover:bg-opacity-90 transition-all font-label-md text-label-md"
-            >تحميل البرنامج</button
+            >تحميل البرنامج</a
           >
         </div>
       </div>
@@ -83,15 +84,17 @@ const { title } = Astro.props;
             المعقدة.
           </p>
           <div class="flex gap-md pt-md">
-            <button
+            <a
+              href="https://github.com/user-attachments/files/28430455/haris-alshabaka-amd64-installer.zip"
               class="bg-primary text-on-primary px-xl py-sm rounded-lg font-headline-sm text-headline-sm flex items-center gap-xs"
             >
               تحميل البرنامج
               <span class="material-symbols-outlined">arrow_downward</span>
-            </button>
-            <button
+            </a>
+            <a
+              href="#features"
               class="border border-outline text-primary px-xl py-sm rounded-lg font-headline-sm text-headline-sm"
-              >المميزات</button
+              >المميزات</a
             >
           </div>
         </div>
@@ -183,7 +186,10 @@ const { title } = Astro.props;
         </div>
       </section>
       <!-- Features Section -->
-      <section class="py-xl max-w-max-width mx-auto px-margin-desktop">
+      <section
+        id="features"
+        class="py-xl max-w-max-width mx-auto px-margin-desktop"
+      >
         <div class="text-center mb-xl">
           <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">
             قوة التحليل في متناول يدك
@@ -426,7 +432,7 @@ const { title } = Astro.props;
           <p
             class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant"
           >
-            © 2024 حارس الشبكة. جميع الحقوق محفوظة. تحليل آمن لحركة الشبكة.
+            © 2026 حارس الشبكة. جميع الحقوق محفوظة. تحليل آمن لحركة الشبكة.
           </p>
         </div>
         <nav class="flex gap-lg">
