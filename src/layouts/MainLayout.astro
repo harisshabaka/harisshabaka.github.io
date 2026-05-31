@@ -76,12 +76,12 @@ const { title } = Astro.props;
           <h1
             class="font-headline-lg text-headline-lg text-primary leading-tight"
           >
-            حارس الشبكة - محلل حركة البيانات الاحترافي
+            حارس الشبكة - مراقب العمليات والاتصالات
           </h1>
           <p class="font-body-lg text-body-lg text-on-surface-variant">
-            نظام متطور لمراقبة وتحليل حركة مرور الشبكة في الوقت الفعلي، مصمم
-            لتوفير رؤية عميقة وحماية فائقة لبياناتك الرقمية من التهديدات
-            المعقدة.
+            نظام متطور لمراقبة العمليات النشطة واتصالات الشبكة في الوقت الفعلي، يعرض
+            تفاصيل كل عملية من حيث التوقيع الرقمي، عناوين IP البعيدة، المواقع الجغرافية،
+            والمنافذ المستخدمة مع إمكانية التصفية والبحث المتقدم.
           </p>
           <div class="flex gap-md pt-md">
             <a
@@ -119,7 +119,7 @@ const { title } = Astro.props;
                 style="font-variation-settings: 'FILL' 1;">verified_user</span
               >
               <span class="font-label-md text-label-md"
-                >تحليل معتمد بنسبة 99.9%</span
+                >كشف الملفات الموقعة وغير الموقعة</span
               >
             </div>
           </div>
@@ -141,10 +141,10 @@ const { title } = Astro.props;
                 <h3
                   class="font-headline-sm text-headline-sm mb-base text-primary"
                 >
-                  غموض البيانات
+                  ملفات غير موقعة
                 </h3>
                 <p class="font-body-md text-body-md text-on-surface-variant">
-                  صعوبة رصد التحركات غير المصرح بها داخل الشبكة الخاصة.
+                  صعوبة التمييز بين الملفات الموثوقة وغير الموثوقة التي تتصل بالإنترنت.
                 </p>
               </div>
             </div>
@@ -158,10 +158,10 @@ const { title } = Astro.props;
                 <h3
                   class="font-headline-sm text-headline-sm mb-base text-primary"
                 >
-                  تسريب المعلومات
+                  اتصالات غير معروفة
                 </h3>
                 <p class="font-body-md text-body-md text-on-surface-variant">
-                  مخاطر عالية لنقل البيانات الحساسة إلى وجهات غير معروفة.
+                  مخاطر الاتصال بعناوين IP وبلدان غير معروفة دون معرفة المصدر.
                 </p>
               </div>
             </div>
@@ -175,10 +175,10 @@ const { title } = Astro.props;
                 <h3
                   class="font-headline-sm text-headline-sm mb-base text-primary"
                 >
-                  التهديدات المتخفية
+                  العمليات الخفية
                 </h3>
                 <p class="font-body-md text-body-md text-on-surface-variant">
-                  هجمات تستخدم قنوات شرعية لتجنب أنظمة الدفاع التقليدية.
+                  صعوبة تتبع العمليات التي تعمل في الخلفية وتستخدم الشبكة.
                 </p>
               </div>
             </div>
@@ -192,12 +192,12 @@ const { title } = Astro.props;
       >
         <div class="text-center mb-xl">
           <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">
-            قوة التحليل في متناول يدك
+            مراقبة شاملة للاتصالات والعمليات
           </h2>
           <p
             class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
           >
-            أدوات متكاملة مصممة لمديري الأنظمة وخبراء الأمن السيبراني.
+            أدوات متكاملة لتتبع كل عملية تتصل بالإنترنت مع تفاصيل كاملة عن التوقيع والموقع.
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-md">
@@ -206,10 +206,10 @@ const { title } = Astro.props;
               >speed</span
             >
             <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
-              مراقبة فورية
+              مراقبة العمليات الحية
             </h4>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              تحليل حزم البيانات وتدفق الشبكة لحظة بلحظة وبدون تأخير.
+              عرض جميع العمليات النشطة مع تفاصيل PID، المسار، العملية الأم، وحالة التوقيع.
             </p>
           </div>
           <div class="bento-card p-lg rounded-xl">
@@ -217,10 +217,10 @@ const { title } = Astro.props;
               >map</span
             >
             <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
-              تخطيط جغرافي
+              خريطة الاتصالات العالمية
             </h4>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              رسم خريطة تفاعلية توضح مصدر ووجهة كل طلب شبكة حول العالم.
+              كرة أرضية ثلاثية الأبعاد توضح الدول المتصل بها مع عدد الاتصالات والعمليات.
             </p>
           </div>
           <div class="bento-card p-lg rounded-xl">
@@ -228,10 +228,10 @@ const { title } = Astro.props;
               >radar</span
             >
             <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
-              كشف التسلل
+              التحقق من التوقيع الرقمي
             </h4>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              خوارزميات ذكية لتحديد الأنماط المشبوهة ومحاولات الاختراق.
+              تمييز الملفات الموثوقة (الموقعة) عن غير الموثوقة (غير الموقعة) بوضوح.
             </p>
           </div>
           <div class="bento-card p-lg rounded-xl">
@@ -239,10 +239,10 @@ const { title } = Astro.props;
               >bar_chart</span
             >
             <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
-              تقارير مفصلة
+              تفاصيل الاتصال الشاملة
             </h4>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              إصدار تقارير دورية حول أداء الشبكة واستخدام النطاق الترددي.
+              عرض عناوين IP البعيدة، المنافذ، البروتوكولات، ونوع الشبكة (محلية/خارجية).
             </p>
           </div>
           <!-- <div class="bento-card p-lg rounded-xl">
@@ -267,12 +267,11 @@ const { title } = Astro.props;
         >
           <div>
             <h2 class="font-headline-lg text-headline-lg mb-md">
-              رؤية عالمية للبيانات
+              تتبع الاتصالات الجغرافية
             </h2>
             <p class="font-body-lg text-body-lg opacity-80 mb-lg">
-              نستخدم تقنية Three.js المتقدمة لتجسيد حركة البيانات كتدفقات بصرية
-              على كرة أرضية ثلاثية الأبعاد، مما يتيح لك فهم التوزيع الجغرافي
-              لعملياتك في ثوانٍ.
+              كرة أرضية تفاعلية تعرض الدول المتصل بها مع خطوط متحركة توضح المسارات،
+              مع إمكانية النقر على أي دولة لعرض التفاصيل الكاملة عن الاتصالات والعمليات.
             </p>
             <ul class="space-y-sm">
               <li class="flex items-center gap-sm">
@@ -280,7 +279,7 @@ const { title } = Astro.props;
                   >check_circle</span
                 >
                 <span class="font-body-md text-body-md"
-                  >تمثيل واقعي للمسارات الدولية</span
+                  >عرض عدد الاتصالات لكل دولة</span
                 >
               </li>
               <li class="flex items-center gap-sm">
@@ -288,7 +287,15 @@ const { title } = Astro.props;
                   >check_circle</span
                 >
                 <span class="font-body-md text-body-md"
-                  >تفاعل كامل مع العناصر البصرية</span
+                  >قائمة العمليات المتصلة بكل دولة</span
+                >
+              </li>
+              <li class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-secondary"
+                  >check_circle</span
+                >
+                <span class="font-body-md text-body-md"
+                  >عرض عناوين IP لكل اتصال</span
                 >
               </li>
             </ul>
@@ -314,7 +321,7 @@ const { title } = Astro.props;
         <h3
           class="font-headline-md text-headline-md text-primary mb-lg text-center"
         >
-          نظام تقييم المخاطر الفوري
+          نظام التحقق من التوقيع الرقمي
         </h3>
         <div
           class="flex flex-col md:flex-row justify-center items-center gap-xl"
@@ -325,34 +332,15 @@ const { title } = Astro.props;
             >
               <span
                 class="material-symbols-outlined text-xl"
-                style="font-variation-settings: 'FILL' 1;">check_circle</span
+                style="font-variation-settings: 'FILL' 1;">verified_user</span
               >
             </div>
             <div>
               <span class="font-headline-sm text-headline-sm block"
-                >آمن (Safe)</span
+                >موثوق (Signed)</span
               >
               <p class="font-label-sm text-label-sm text-on-surface-variant">
-                لا توجد تهديدات نشطة
-              </p>
-            </div>
-          </div>
-          <div class="hidden md:block h-px w-24 bg-outline-variant"></div>
-          <div class="flex flex-col items-center gap-sm text-center">
-            <div
-              class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-yellow-700"
-            >
-              <span
-                class="material-symbols-outlined text-xl"
-                style="font-variation-settings: 'FILL' 1;">warning</span
-              >
-            </div>
-            <div>
-              <span class="font-headline-sm text-headline-sm block"
-                >تحذير (Warning)</span
-              >
-              <p class="font-label-sm text-label-sm text-on-surface-variant">
-                نشاط غير معتاد مرصود
+                ملف موقّع رقمياً وموثوق
               </p>
             </div>
           </div>
@@ -363,15 +351,15 @@ const { title } = Astro.props;
             >
               <span
                 class="material-symbols-outlined text-xl"
-                style="font-variation-settings: 'FILL' 1;">report</span
+                style="font-variation-settings: 'FILL' 1;">shield</span
               >
             </div>
             <div>
               <span class="font-headline-sm text-headline-sm block"
-                >حرج (Critical)</span
+                >غير موثوق (Unsigned)</span
               >
               <p class="font-label-sm text-label-sm text-on-surface-variant">
-                تهديد أمني مباشر مكتشف
+                ملف غير موقّع ويحتاج مراجعة
               </p>
             </div>
           </div>
@@ -432,7 +420,7 @@ const { title } = Astro.props;
           <p
             class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant"
           >
-            © 2026 حارس الشبكة. جميع الحقوق محفوظة. تحليل آمن لحركة الشبكة.
+            © 2026 حارس الشبكة. جميع الحقوق محفوظة. مراقبة آمنة للعمليات والاتصالات.
           </p>
         </div>
         <nav class="flex gap-lg">
