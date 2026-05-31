@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-primary: #000000;
+    --color-primary-container: #131b2e;
+    --color-on-primary: #ffffff;
+    --color-on-primary-container: #7c839b;
+
+    --color-secondary: #0051d5;
+    --color-secondary-container: #316bf3;
+    --color-on-secondary: #ffffff;
+    --color-on-secondary-container: #fefcff;
+
+    --color-background: #f8f9ff;
+    --color-surface: #f8f9ff;
+    --color-surface-dim: #cbdbf5;
+    --color-surface-bright: #f8f9ff;
+
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #eff4ff;
+    --color-surface-container: #e5eeff;
+    --color-surface-container-high: #dce9ff;
+    --color-surface-container-highest: #d3e4fe;
+
+    --color-surface-variant: #d3e4fe;
+    --color-on-surface: #0b1c30;
+    --color-on-surface-variant: #45464d;
+
+    --color-outline: #76777d;
+    --color-outline-variant: #c6c6cd;
+
+    --color-error: #ba1a1a;
+    --color-error-container: #ffdad6;
+    --color-on-error: #ffffff;
+    --color-on-error-container: #93000a;
+
+    --color-tertiary: #000000;
+    --color-tertiary-container: #171c1f;
+    --color-on-tertiary: #ffffff;
+    --color-on-tertiary-container: #808488;
+
+    --color-inverse-surface: #213145;
+    --color-inverse-on-surface: #eaf1ff;
+    --color-inverse-primary: #bec6e0;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-base: 4px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+
+    --spacing-gutter: 24px;
+    --spacing-margin-mobile: 16px;
+    --spacing-margin-desktop: 40px;
+
+    /* Layout */
+    --container-max-width: 1440px;
+
+    /* Radius */
+    --radius: 2px;
+    --radius-lg: 4px;
+    --radius-xl: 8px;
+    --radius-full: 12px;
+
+    /* Fonts */
+    --font-sans: "Noto Sans Arabic", "Hanken Grotesk", sans-serif;
+
+    /* Typography */
+    --text-headline-lg: 32px;
+    --text-headline-md: 24px;
+    --text-headline-sm: 18px;
+
+    --text-body-lg: 16px;
+    --text-body-md: 14px;
+
+    --text-label-md: 13px;
+    --text-label-sm: 12px;
+}
+
+
+@layer base {
+    body {
+        font-family: var(--font-sans);
+        background: var(--color-background);
+        color: var(--color-on-surface);
+        min-height: max(884px, 100dvh);
+    }
+}
+
+@layer components {
+    .glass-card {
+        background: rgb(255 255 255 / 0.8);
+        backdrop-filter: blur(8px);
+        border: 1px solid #e2e8f0;
+    }
+
+    .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+    }
+
+    .section {
+        max-width: var(--container-max-width);
+        margin-inline: auto;
+        padding-inline: var(--spacing-margin-desktop);
+    }
+}
+
+@keyframes pulse-soft {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.pulse-soft {
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

@@ -1,0 +1,476 @@
+---
+import "../styles/global.css";
+import logo from "../assets/logo.png";
+import table from "../assets/table.png";
+import map from "../assets/map.png";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-surface text-on-surface">
+    <!-- TopNavBar -->
+    <header
+      class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant"
+    >
+      <div
+        class="flex justify-between items-center max-w-max-width mx-auto px-margin-desktop py-sm"
+      >
+        <div class="flex items-center gap-xl">
+          <a
+            href="#"
+            class="flex items-center gap-3 font-headline-md text-headline-md font-bold text-primary"
+          >
+            <img
+              src={logo.src}
+              alt="حارس الشبكة"
+              class="h-10 w-10 object-contain"
+            />
+
+            <span>حارس الشبكة</span>
+          </a>
+          <nav class="hidden md:flex gap-lg items-center">
+            <a
+              class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-lg text-body-lg"
+              href="#">الرئيسية</a
+            >
+            <a
+              class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg"
+              href="#">المميزات</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-md">
+          <button
+            class="bg-primary text-on-primary px-lg py-xs rounded hover:bg-opacity-90 transition-all font-label-md text-label-md"
+            >تحميل البرنامج</button
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="max-w-max-width mx-auto px-margin-desktop py-xl grid md:grid-cols-2 gap-xl items-center"
+      >
+        <div class="space-y-md">
+          <h1
+            class="font-headline-lg text-headline-lg text-primary leading-tight"
+          >
+            حارس الشبكة - محلل حركة البيانات الاحترافي
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">
+            نظام متطور لمراقبة وتحليل حركة مرور الشبكة في الوقت الفعلي، مصمم
+            لتوفير رؤية عميقة وحماية فائقة لبياناتك الرقمية من التهديدات
+            المعقدة.
+          </p>
+          <div class="flex gap-md pt-md">
+            <button
+              class="bg-primary text-on-primary px-xl py-sm rounded-lg font-headline-sm text-headline-sm flex items-center gap-xs"
+            >
+              تحميل البرنامج
+              <span class="material-symbols-outlined">arrow_downward</span>
+            </button>
+            <button
+              class="border border-outline text-primary px-xl py-sm rounded-lg font-headline-sm text-headline-sm"
+              >المميزات</button
+            >
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            class="bg-surface-container rounded-xl p-base border border-outline-variant shadow-sm overflow-hidden"
+          >
+            <img
+              alt="Network Dashboard Preview"
+              class="w-full h-auto rounded-lg object-cover"
+              data-alt="A clean and professional software interface dashboard displayed on a high-resolution screen. The interface shows detailed network traffic graphs, geographic heat maps, and data analysis tables in a crisp light-mode aesthetic. The workspace is a bright, modern corporate office with soft natural lighting and a palette of whites and grays. The overall atmosphere is focused, technical, and trustworthy."
+              src={table.src}
+            />
+          </div>
+          <!-- Floating Decorative Element -->
+          <div
+            class="absolute -bottom-xs -right-xs bg-secondary-container text-on-secondary-container px-md py-sm rounded shadow-lg border border-outline-variant"
+          >
+            <div class="flex items-center gap-xs">
+              <span
+                class="material-symbols-outlined"
+                style="font-variation-settings: 'FILL' 1;">verified_user</span
+              >
+              <span class="font-label-md text-label-md"
+                >تحليل معتمد بنسبة 99.9%</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Problem Section -->
+      <section class="bg-surface-container-low py-xl">
+        <div class="max-w-max-width mx-auto px-margin-desktop">
+          <div class="grid md:grid-cols-3 gap-lg">
+            <div class="flex items-start gap-md">
+              <div
+                class="bg-surface-container-highest p-sm rounded-full text-primary"
+              >
+                <span class="material-symbols-outlined text-lg"
+                  >visibility_off</span
+                >
+              </div>
+              <div>
+                <h3
+                  class="font-headline-sm text-headline-sm mb-base text-primary"
+                >
+                  غموض البيانات
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  صعوبة رصد التحركات غير المصرح بها داخل الشبكة الخاصة.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-md">
+              <div
+                class="bg-surface-container-highest p-sm rounded-full text-primary"
+              >
+                <span class="material-symbols-outlined text-lg">encrypted</span>
+              </div>
+              <div>
+                <h3
+                  class="font-headline-sm text-headline-sm mb-base text-primary"
+                >
+                  تسريب المعلومات
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  مخاطر عالية لنقل البيانات الحساسة إلى وجهات غير معروفة.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-md">
+              <div
+                class="bg-surface-container-highest p-sm rounded-full text-primary"
+              >
+                <span class="material-symbols-outlined text-lg">dangerous</span>
+              </div>
+              <div>
+                <h3
+                  class="font-headline-sm text-headline-sm mb-base text-primary"
+                >
+                  التهديدات المتخفية
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  هجمات تستخدم قنوات شرعية لتجنب أنظمة الدفاع التقليدية.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Features Section -->
+      <section class="py-xl max-w-max-width mx-auto px-margin-desktop">
+        <div class="text-center mb-xl">
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">
+            قوة التحليل في متناول يدك
+          </h2>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
+          >
+            أدوات متكاملة مصممة لمديري الأنظمة وخبراء الأمن السيبراني.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-md">
+          <div class="bento-card p-lg rounded-xl">
+            <span class="material-symbols-outlined text-secondary text-xl mb-md"
+              >speed</span
+            >
+            <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
+              مراقبة فورية
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              تحليل حزم البيانات وتدفق الشبكة لحظة بلحظة وبدون تأخير.
+            </p>
+          </div>
+          <div class="bento-card p-lg rounded-xl">
+            <span class="material-symbols-outlined text-secondary text-xl mb-md"
+              >map</span
+            >
+            <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
+              تخطيط جغرافي
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              رسم خريطة تفاعلية توضح مصدر ووجهة كل طلب شبكة حول العالم.
+            </p>
+          </div>
+          <div class="bento-card p-lg rounded-xl">
+            <span class="material-symbols-outlined text-secondary text-xl mb-md"
+              >radar</span
+            >
+            <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
+              كشف التسلل
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              خوارزميات ذكية لتحديد الأنماط المشبوهة ومحاولات الاختراق.
+            </p>
+          </div>
+          <div class="bento-card p-lg rounded-xl">
+            <span class="material-symbols-outlined text-secondary text-xl mb-md"
+              >bar_chart</span
+            >
+            <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
+              تقارير مفصلة
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              إصدار تقارير دورية حول أداء الشبكة واستخدام النطاق الترددي.
+            </p>
+          </div>
+          <!-- <div class="bento-card p-lg rounded-xl">
+            <span class="material-symbols-outlined text-secondary text-xl mb-md"
+              >notifications_active</span
+            >
+            <h4 class="font-headline-sm text-headline-sm mb-sm text-primary">
+              تنبيهات ذكية
+            </h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              إشعارات فورية عبر البريد أو الهاتف عند اكتشاف نشاط غير طبيعي.
+            </p>
+          </div> -->
+        </div>
+      </section>
+      <!-- 3D Visual Section (Placeholder Graphic) -->
+      <section
+        class="bg-tertiary text-on-tertiary py-xl overflow-hidden relative"
+      >
+        <div
+          class="max-w-max-width mx-auto px-margin-desktop grid md:grid-cols-2 gap-xl items-center"
+        >
+          <div>
+            <h2 class="font-headline-lg text-headline-lg mb-md">
+              رؤية عالمية للبيانات
+            </h2>
+            <p class="font-body-lg text-body-lg opacity-80 mb-lg">
+              نستخدم تقنية Three.js المتقدمة لتجسيد حركة البيانات كتدفقات بصرية
+              على كرة أرضية ثلاثية الأبعاد، مما يتيح لك فهم التوزيع الجغرافي
+              لعملياتك في ثوانٍ.
+            </p>
+            <ul class="space-y-sm">
+              <li class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-secondary"
+                  >check_circle</span
+                >
+                <span class="font-body-md text-body-md"
+                  >تمثيل واقعي للمسارات الدولية</span
+                >
+              </li>
+              <li class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-secondary"
+                  >check_circle</span
+                >
+                <span class="font-body-md text-body-md"
+                  >تفاعل كامل مع العناصر البصرية</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="relative h-[400px] flex items-center justify-center">
+            <div
+              class="absolute inset-0 bg-secondary opacity-10 blur-3xl rounded-full"
+            >
+            </div>
+            <img
+              alt="Global Data Visualization"
+              class="relative z-10 w-full"
+              data-alt="A sophisticated 3D visualization of a digital globe glowing in a dark, high-tech environment. Streams of data particles in deep blue and white are connecting major world cities. The aesthetic is clean, professional, and corporate, emphasizing global connectivity and advanced data security without flashy neon effects. The lighting is focused and controlled, suggesting a high-level command center."
+              src={map.src}
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Security Status -->
+      <section
+        class="py-xl max-w-max-width mx-auto px-margin-desktop border-b border-outline-variant"
+      >
+        <h3
+          class="font-headline-md text-headline-md text-primary mb-lg text-center"
+        >
+          نظام تقييم المخاطر الفوري
+        </h3>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-xl"
+        >
+          <div class="flex flex-col items-center gap-sm text-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-green-700"
+            >
+              <span
+                class="material-symbols-outlined text-xl"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+            </div>
+            <div>
+              <span class="font-headline-sm text-headline-sm block"
+                >آمن (Safe)</span
+              >
+              <p class="font-label-sm text-label-sm text-on-surface-variant">
+                لا توجد تهديدات نشطة
+              </p>
+            </div>
+          </div>
+          <div class="hidden md:block h-px w-24 bg-outline-variant"></div>
+          <div class="flex flex-col items-center gap-sm text-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-yellow-700"
+            >
+              <span
+                class="material-symbols-outlined text-xl"
+                style="font-variation-settings: 'FILL' 1;">warning</span
+              >
+            </div>
+            <div>
+              <span class="font-headline-sm text-headline-sm block"
+                >تحذير (Warning)</span
+              >
+              <p class="font-label-sm text-label-sm text-on-surface-variant">
+                نشاط غير معتاد مرصود
+              </p>
+            </div>
+          </div>
+          <div class="hidden md:block h-px w-24 bg-outline-variant"></div>
+          <div class="flex flex-col items-center gap-sm text-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-red-700"
+            >
+              <span
+                class="material-symbols-outlined text-xl"
+                style="font-variation-settings: 'FILL' 1;">report</span
+              >
+            </div>
+            <div>
+              <span class="font-headline-sm text-headline-sm block"
+                >حرج (Critical)</span
+              >
+              <p class="font-label-sm text-label-sm text-on-surface-variant">
+                تهديد أمني مباشر مكتشف
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tech Stack -->
+      <section class="py-lg bg-surface">
+        <div class="max-w-max-width mx-auto px-margin-desktop">
+          <p
+            class="text-center font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-lg"
+          >
+            مدعوم بأحدث التقنيات
+          </p>
+          <div
+            class="flex flex-wrap justify-center items-center gap-xl opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <div class="flex items-center gap-xs grayscale">
+              <img
+                alt="Go Logo"
+                class="h-8"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBVEIOQ7Sbt2__NQqdi5IcGggCW4UJJns68U2c6CA2MRA8_tD7NryMt7HGxVPc3X6rd5o_eXLjhiuw2aqikTaHUuVi1ZqaqLWk7t3AuXhDcmLAg7PiXQLhx-fo4wX1ajIRIBr0qNRW9e7qK8nP5v0ztpAPWGhCa5nLr0vNM4nuBiBDhDtuBI8rryJF0LJeEllHSXD_R_4rl5yBGQLs8LMs6C_GzhC7OdnIQeKFoIjxTVjdZzPEIV24QjsV1hv5EnPyAe8TXt33LYd7"
+              />
+              <span class="font-bold text-headline-sm">Golang</span>
+            </div>
+            <div class="flex items-center gap-xs grayscale">
+              <span class="font-bold text-headline-sm">Wails</span>
+            </div>
+            <div class="flex items-center gap-xs grayscale">
+              <img
+                alt="React Logo"
+                class="h-8"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaM6iK5XFywvH5CyabWwBHQdhUy4Fv2_dG4SawTNMYuYtQ-ooT6NepB5YcTLxlVawuyoQqHNLDZuwSpZoCPrgEGNOyE6baGVfFC046wE60OrUn5Z0h4rKQAs24u9xly60MNB2_02Qj95pg5XFCseFdhmbL9pcZlqcM_9z0XMywZwgKF5Aaal7YVSoXT2lW3In8c1saJS_auzeQvpIWp3ZSrl2oCtdvjWy75lIhqqlvmlQTa-UNMoC8Qz_BT6_M1r3wiEyYQRjMIFTl"
+              />
+              <span class="font-bold text-headline-sm">React</span>
+            </div>
+            <div class="flex items-center gap-xs grayscale">
+              <span class="font-bold text-headline-sm">Three.js</span>
+            </div>
+
+            <div class="flex items-center gap-xs grayscale">
+              <span class="font-bold text-headline-sm">Protobuf</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full py-xl bg-surface-container-low border-t border-outline-variant"
+    >
+      <div
+        class="max-w-max-width mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md"
+      >
+        <div class="space-y-xs">
+          <h2 class="font-headline-sm text-headline-sm font-bold text-primary">
+            حارس الشبكة
+          </h2>
+          <p
+            class="font-label-sm text-label-sm text-on-surface dark:text-on-surface-variant"
+          >
+            © 2024 حارس الشبكة. جميع الحقوق محفوظة. تحليل آمن لحركة الشبكة.
+          </p>
+        </div>
+        <nav class="flex gap-lg">
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-secondary"
+            href="#">سياسة الخصوصية</a
+          >
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-secondary"
+            href="#">شروط الخدمة</a
+          >
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-secondary"
+            href="#">الأمن</a
+          >
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-secondary"
+            href="#">الدعم الفني</a
+          >
+        </nav>
+      </div>
+    </footer>
+    <script>
+      // Micro-interactions and subtle effects
+      document.querySelectorAll(".bento-card").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.classList.add("shadow-md");
+          card.style.transform = "translateY(-2px)";
+        });
+        card.addEventListener("mouseleave", () => {
+          card.classList.remove("shadow-md");
+          card.style.transform = "translateY(0)";
+        });
+      });
+
+      // Sticky Navbar shadow on scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 0) {
+          header.classList.add("shadow-sm");
+        } else {
+          header.classList.remove("shadow-sm");
+        }
+      });
+    </script>
+  </body>
+</html>
